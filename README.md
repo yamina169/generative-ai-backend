@@ -1,4 +1,4 @@
-# 🤖 Generative AI Backend – NestJS & Ollama
+# Generative AI Backend – NestJS & Ollama
 
 Backend for a **Generative AI mini-project** built with **NestJS** and **Ollama (local LLMs)**.
 This project provides APIs for **text summarization** and **idea generation** using a local LLM.
@@ -8,9 +8,7 @@ This project provides APIs for **text summarization** and **idea generation** us
 ## 🚀 Tech Stack
 
 - **NestJS** – Backend framework
-- **TypeScript**
 - **Ollama** – Local LLM runner
-- **Axios** – HTTP client
 - **Swagger** – API documentation
 
 ---
@@ -18,28 +16,39 @@ This project provides APIs for **text summarization** and **idea generation** us
 ## 📦 Features
 
 - ✨ Summarize text using a local LLM
-- 💡 Generate unlimited creative ideas from a topic
-- 🔁 Streaming responses from Ollama
-- 📘 Swagger documentation
+- 💡 Generate creative ideas from a topic
+
+---
+
+## 🧠 Model Used
+
+This project uses the **`gemma3:1b`** model via **Ollama**.
+
+### Why `gemma3:1b`?
+
+- 🪶 **Lightweight & fast** → ideal for local development
+- 🧠 **Good reasoning** for summarization and idea generation
+- 💻 **Runs on CPU** (no GPU required)
+- 🔐 **Fully local** → no external API calls or keys needed
 
 ---
 
 ## 🛠️ Prerequisites
 
-Make sure you have installed:
+Install the following:
 
 - **Node.js** ≥ 18
 - **npm**
 - **Ollama**
 
-### Install Ollama & model
+### Install Ollama & Model
 
 ```bash
 ollama pull gemma3:1b
 ollama run gemma3:1b
 ```
 
-Ollama must be running on:
+Ensure Ollama runs at:
 
 ```
 http://localhost:11434
@@ -57,13 +66,13 @@ npm install
 
 ---
 
-## ▶️ Run the backend
+## ▶️ Run the Backend
 
 ```bash
 npm run start:dev
 ```
 
-Backend will be available at:
+Access:
 
 ```
 http://localhost:3000
@@ -77,17 +86,17 @@ http://localhost:3000/api-docs
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
-### 1️⃣ Summarize text
+### 1️⃣ Summarize Text
 
 **POST** `/generative/summarize`
 
-**Request body**
+**Request**
 
 ```json
 {
-  "text": "NestJS is a Node.js framework for building efficient and scalable server-side applications...."
+  "text": "NestJS is a Node.js framework for building efficient and scalable server-side applications..."
 }
 ```
 
@@ -101,11 +110,11 @@ http://localhost:3000/api-docs
 
 ---
 
-### 2️⃣ Generate ideas
+### 2️⃣ Generate Ideas
 
 **POST** `/generative/generate`
 
-**Request body**
+**Request**
 
 ```json
 {
@@ -120,20 +129,6 @@ http://localhost:3000/api-docs
   "result": "- Smart task prioritization\n- AI-based deadline prediction\n- Automatic task breakdown\n..."
 }
 ```
-
----
-
-## 🧠 Prompt Strategy
-
-- **Summarization** → clear, concise, neutral summaries
-- **Idea generation** → unlimited, actionable, language-neutral ideas
-
-The prompts are optimized to focus on:
-
-- clarity
-- usefulness
-- creativity
-- no strict limit on number of ideas
 
 ---
 
@@ -153,22 +148,26 @@ src/
 
 ## 🔒 Notes
 
-- This backend focuses exclusively on **text-based AI generation**.
-- Ollama runs **locally**, no external API keys required.
-- Designed for learning, experimentation, and extension.
-
----
-
-## 👩‍💻 Author
-
-Built as a **Generative AI mini-project** using **NestJS & Ollama**.
+- Focused on **text-based AI generation**
+- Ollama runs **locally**, no external keys needed
+- Built for learning, experimentation, and extension
 
 ---
 
 ## ⭐ Future Improvements
 
-- Model selection endpoint
+- Add more features
+- Improve and optimize APIs
 - Frontend (React / Next.js)
-- Task-based AI integration
+- Dockerisation & deployment tests
 
 ---
+
+## 📚 References / Learning Sources
+
+- [NestJS Documentation](https://docs.nestjs.com/)
+- [Run OpenAI Models Locally with Ollama & Node.js](http://sebastiangreen.co.uk/how-to-run-openai-models-locally-with-ollama-and-node-js/)
+- [Integrate Ollama with Node.js & React](https://medium.com/@asim.dev.jaipuri/how-to-integrate-ollama-with-node-js-react-local-llm-chatbot-28561436bb03)
+- [Running Local LLM Ollama from API](https://dev.to/hisukurifu/running-local-llm-ollama-from-api-in-node-2kk3)
+- [Ollama Docs](https://docs.ollama.com/)
+- [Udemy – NestJS Complete Guide](https://www.udemy.com/course/nestjs-the-complete-developers-guide/?start=75)
