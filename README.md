@@ -1,7 +1,7 @@
 # Generative AI Backend – NestJS & Ollama
 
 Backend for a **Generative AI mini-project** built with **NestJS** and **Ollama (local LLMs)**.
-This project provides APIs for **text summarization** and **idea generation** using a local LLM.
+This project provides API for **text summarization** and **idea generation** using a local LLM.
 
 ---
 
